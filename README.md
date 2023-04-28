@@ -1,4 +1,4 @@
-## 22/04/23 Mini-Project - Shop Landing Page
+# 22/04/23 Mini-Project - Shop Landing Page
 
 ##  The Challenge
 
@@ -18,7 +18,6 @@ Your challenge is to **build out a shop landing page** which can be anything fro
    <li>View the optimal layout for each page depending on their device's screen size</li>
    <li>See hover states for all interactive elements throughout the site</li>
    <li>Make selections to create a coffee subscription and see an order summary modal of their choices</li>
-   <br/>
 
 <h2>🤓 What I Learned</h2>
 <p>Despite taking the time to think about how to build the different functionalities with clean and organized code, I came across some challenges, mainly related to the styling of the elements and responsiveness.</p>
