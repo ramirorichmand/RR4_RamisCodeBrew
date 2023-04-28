@@ -1,0 +1,613 @@
+.card--plan {
+    width: 90%;
+    background-image: url(../assets/plan/mobile/image-hero-blackcup.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin-top: 2rem;
+    padding: 4rem 1.5rem;
+    min-height: 23rem;
+
+    h1 {
+        font-size: 2.2rem;
+    }
+
+    p {
+        font-size: 0.95rem;
+        margin: 1.4rem auto;
+        width: clamp(15rem, 70vw, 20rem);
+    }
+}
+
+.all-steps {
+    width: 100%;
+    border-radius: 0.8rem;
+    background-image: url(../assets/plan/mobile/bg-steps.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin: 7.5rem auto;
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    justify-content: center;
+    padding-bottom: 5.5rem;
+}
+
+.steps-illustration-2 {
+    margin: 3rem 0 0 1.5rem;
+    display: none;
+    position: relative;
+    width: 70%;
+    height: 2rem;
+}
+
+.steps-illustration-2 .circle1 {
+    z-index: 2;
+    left: -1rem;
+    position: absolute;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    border-style: solid;
+    border-width: 3px;
+    border-color: #0e8684;
+}
+
+.steps-illustration-2 .circle2 {
+    z-index: 2;
+    transform-origin: 50% 50%;
+    left: 50%;
+    position: absolute;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    border-style: solid;
+    border-width: 3px;
+    border-color: #0e8684;
+}
+
+.steps-illustration-2 .circle3 {
+    z-index: 2;
+    transform-origin: 50% 50%;
+    right: -1rem;
+    position: absolute;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    border-style: solid;
+    border-width: 3px;
+    border-color: #0e8684;
+}
+
+.steps-illustration-2 .behind-line {
+    position: absolute;
+    top: 50%;
+    transform-origin: 50% 50%;
+    width: 100%;
+    height: 3px;
+    background-color: #fdd6ba;
+}
+
+.step {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    position: relative;
+    margin: 5rem 0 1rem;
+}
+
+.step h1 {
+    font-size: 4rem;
+    line-height: 6rem;
+    margin: 0 auto;
+    color: #fdd6ba;
+    font-family: "Fraunces", sans-serif;
+    text-align: center;
+}
+
+.step h2 {
+    font-size: 1.6rem;
+    line-height: 2rem;
+    color: #fefcf7;
+    font-family: "Fraunces", sans-serif;
+    text-align: center;
+}
+
+.step p {
+    width: clamp(15rem, 70vw, 22rem);
+    text-align: center;
+    font-family: "Barlow", sans-serif;
+    margin: 1rem auto 0 auto;
+    font-size: 1rem;
+    line-height: 1.6rem;
+    color: #fefcf7;
+}
+
+.questions-map {
+    display: none;
+}
+
+.question-map--active {
+    h3 {
+        color: #293039;
+        &:hover {
+            color: #293039;
+        }
+    }
+}
+
+.choice {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    margin: 2rem auto 1rem auto;
+}
+
+.choice--disabled {
+    opacity: 0.5 !important;
+    pointer-events: none !important;
+}
+
+.choice .question {
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 0 3rem 0;
+}
+
+.choice .question h1 {
+    font-size: 1.6rem;
+    font-family: "Fraunces", sans-serif;
+    font-weight: 900;
+    color: #83888f;
+    width: 75vw;
+}
+
+.choice .question .arrow-wrap img {
+    width: 1.7rem;
+    transition: 200ms transform;
+    filter: none;
+}
+
+.choice .question--open .arrow-wrap img {
+    transform: rotate(180deg);
+    filter: saturate(160%) brightness(130%) contrast(110%);
+}
+
+.choice .answers {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 800ms ease-out;
+    user-select: none;
+    display: flex;
+    flex-direction: column;
+}
+
+.choice .answers--open {
+    display: flex !important;
+    max-height: 50rem !important;
+    transition: max-height 200ms ease-in;
+}
+
+.choice .answer {
+    width: clamp(8rem, 100%, 50rem);
+    background-color: #f4f1eb;
+    transition: 100ms background-color;
+    border-radius: 0.5rem;
+    margin: 0.5rem auto;
+    padding: 1.5rem;
+    cursor: pointer;
+}
+
+.choice .answer h3 {
+    color: #333d4b;
+    font-size: 1.5rem;
+    font-family: "Fraunces", sans-serif;
+    font-weight: 900;
+}
+
+.choice .answer p {
+    color: #333d4b;
+    font-size: 1rem;
+    font-family: "Barlow", sans-serif;
+    line-height: 1.5;
+    margin-top: 0.5rem;
+}
+
+.answer--active {
+    background-color: #0e8684 !important;
+}
+
+.answer--active p,
+.answer--active h3 {
+    color: white !important;
+}
+
+.disabled {
+    background-color: #e2dedb !important;
+    pointer-events: none;
+}
+
+.order-overview {
+    padding-top: 5em;
+
+    button {
+        user-select: none;
+        display: flex;
+        color: #fefcf7;
+        padding: 1em 2em;
+        border-radius: 0.5rem;
+        font-family: "Fraunces", sans-serif;
+        font-weight: 700;
+        margin: 3em auto 1em auto;
+        border: none;
+        font-size: 1rem;
+        background-color: hsl(179, 81%, 29%);
+        transition: 100ms background-color;
+        transition: transform 500ms;
+
+        &:hover {
+            transform: scale(1.1, 1.1);
+            transition: transform 100ms;
+            cursor: pointer;
+            background-color: #66d2cf;
+        }
+    }
+}
+
+.order-preview {
+    width: 90%;
+    background-color: #293039;
+    padding: 1.5em;
+}
+
+.order-preview h3 {
+    font-family: "Barlow", sans-serif;
+    color: #848990;
+    font-size: 1.2rem;
+    font-weight: 100;
+    margin: 0.5em auto;
+}
+
+.order-preview h4 {
+    font-family: "Fraunces", sans-serif;
+    color: #fefcf7;
+    font-size: 1.5rem;
+    line-height: 1.6;
+}
+
+.custom {
+    color: #0e8684 !important;
+    transition: 100ms color;
+}
+
+.modal {
+    z-index: 6;
+    display: flex;
+    flex-direction: column;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+    position: fixed;
+    width: clamp(100px, 80%, 500px);
+    border-radius: 0.8em;
+    background-color: #fefcf7;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
+    transition: opacity 400ms;
+}
+
+.modal__title {
+    border-radius: 0.8em 0.8em 0 0;
+    background-color: #2f3844;
+}
+
+.modal__title h1 {
+    text-align: center;
+    font-family: "Fraunces", sans-serif;
+    color: #fefcf7;
+    font-size: clamp(1.4rem, 3vw, 2rem);
+    margin: 1rem 0.5em;
+}
+
+.modal__preview h4 {
+    font-family: "Fraunces", sans-serif;
+    color: #83888f;
+    font-size: clamp(0.8rem, 5vw, 1rem);
+    line-height: 1.6;
+    margin: clamp(1.4em, 4vw, 2em);
+}
+
+.modal p {
+    margin: 0 2em;
+    color: #848990;
+    font-family: "Barlow", sans-serif;
+    font-size: 0.8rem;
+    line-height: 1.5;
+    text-align: center;
+    margin: clamp(1.4em, 4vw, 2em);
+}
+
+.modal button {
+    user-select: none;
+    display: flex;
+    color: #fefcf7;
+    padding: 1em 2em;
+    border-radius: 0.5rem;
+    font-family: "Fraunces", sans-serif;
+    margin: 1em auto;
+    border: none;
+    font-size: 1rem;
+    background-color: #0e8684;
+    transition: background-color 100ms;
+    transition: transform 100ms;
+}
+
+.modal button:hover {
+    transform: scale(1.1, 1.1);
+    transition: transform 100ms;
+    cursor: pointer;
+    background-color: #66d2cf;
+}
+
+.checkout-preview {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+}
+
+.checkout-preview h3 {
+    color: #333d4b;
+    font-family: "Fraunces", sans-serif;
+    font-size: clamp(1rem, 6vw, 2rem);
+    margin: 0.2em auto;
+}
+
+#overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(3px);
+    z-index: 5;
+    user-select: none;
+    transition: opacity 300ms;
+}
+
+@media (min-width: 711px) {
+    .card--plan {
+        background-image: url(../assets/plan/tablet/image-hero-blackcup.jpg);
+        margin-top: 4rem;
+        padding: 6.5rem 1.5rem 4rem 4rem;
+        min-height: 28rem;
+
+        h1 {
+            text-align: left;
+            font-size: clamp(5vw, 7vw, 3.6rem);
+        }
+
+        p {
+            width: clamp(25vw, 50vw, 30rem);
+            text-align: left;
+            font-size: clamp(0.9rem, 2.4vw, 1.1rem);
+            margin: 3rem 0 1.4rem;
+        }
+    }
+
+    .all-steps {
+        max-width: 90%;
+        padding: 6rem 6vw;
+        transition: 300ms width ease-in-out;
+        background-image: url("../assets/plan/tablet/bg-steps.png");
+    }
+
+    .steps-illustration-2 {
+        display: block;
+    }
+
+    .steps-list {
+        display: flex;
+    }
+
+    .step {
+        display: flex;
+        flex-direction: column;
+        justify-content: left;
+        width: 30vw;
+        position: relative;
+        margin: 2.5rem 0 1rem;
+    }
+
+    .step h1 {
+        font-size: 4rem;
+        line-height: 6rem;
+        margin: 0;
+        text-align: left;
+    }
+
+    .step h2 {
+        font-size: (clamp(1.2rem, 3.7vw, 2rem));
+        line-height: 1.2;
+        text-align: left;
+        width: clamp(10rem, 22vw, 15rem);
+    }
+
+    .step p {
+        width: 23vw;
+        text-align: left;
+        margin: 1rem 0;
+        line-height: 1.6;
+        font-size: clamp(1rem, 2.3vw, 1.1rem);
+        color: #fefcf7;
+    }
+
+    .choice .question .arrow-wrap img {
+        width: 2.2rem;
+    }
+
+    .choice {
+        width: 80%;
+    }
+
+    .answers {
+        flex-direction: row !important;
+    }
+
+    .answer {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        margin: 0.5rem !important;
+        padding: 3rem 1rem 6vw 1rem !important;
+    }
+
+    .choice .answer p {
+        font-size: clamp(0.9rem, 2.3vw, 1rem);
+    }
+    .answer h3 {
+        font-size: clamp(0.8rem, 4vw, 1.8rem) !important;
+    }
+}
+
+@media (min-width: 1440px) {
+    .card--plan {
+        width: 80%;
+        background-image: url(../assets/plan/desktop/image-hero-blackcup.jpg);
+        min-height: 25rem;
+
+        h1 {
+            font-size: 4.6vw;
+        }
+
+        p {
+            width: 20rem;
+            font-size: clamp(0.85rem, 1.2vw, 1.2rem);
+            line-height: 1.6;
+        }
+    }
+
+    .all-steps {
+        max-width: 80%;
+        transition: 300ms width ease-in-out;
+    }
+
+    .steps-illustration-2 {
+        margin-top: 0;
+    }
+
+    .step p {
+        width: 17vw;
+        text-align: left;
+        margin: 1rem 0;
+        line-height: 1.6;
+        font-size: clamp(1rem, 1.3vw, 1.1rem);
+        color: #fefcf7;
+    }
+
+    .choice .answer:hover {
+        background-color: #fdd6ba;
+        cursor: pointer;
+    }
+
+    .questions-map {
+        top: 100px;
+        position: sticky;
+        user-select: none;
+        display: flex;
+        width: clamp(300px, 2vw, 500px);
+        flex-direction: column;
+        margin: 200px auto 0 10%;
+    }
+
+    .separator {
+        height: 2px;
+        width: 100%;
+        background-color: #adb0b241;
+    }
+
+    .question-map--disabled {
+        user-select: none;
+        pointer-events: none !important;
+    }
+
+    .question-map--disabled h2 {
+        color: #d5d5d4 !important;
+    }
+
+    .question-map--disabled h3 {
+        color: #e5e5e2 !important;
+    }
+
+    .question-map--checked h3 {
+        color: #9ecdc9 !important;
+    }
+
+    .question-map--checked h2 {
+        color: #adb0b2;
+    }
+
+    .question-map--active h2 {
+        color: #333d4b !important;
+    }
+
+    .question-map {
+        cursor: pointer;
+        display: flex;
+        margin: 1.2em 0;
+        transition: transform 400ms ease-in-out;
+    }
+    .question-map h3 {
+        color: #cdcecd;
+        font-size: 1.5rem;
+        font-family: "Fraunces", sans-serif;
+    }
+    .question-map h2 {
+        margin-left: 1em;
+        color: #adb0b2;
+        font-size: 1.5rem;
+        font-family: "Fraunces", sans-serif;
+    }
+    .question-map:hover {
+        transform: translateX(0.5em);
+        transition: transform 200ms ease-in-out;
+    }
+    .question-map:hover h3 {
+        color: #b4b6b8;
+    }
+    .question-map:hover h2 {
+        color: #848990;
+    }
+
+    .questions-section {
+        display: flex;
+        max-width: 80%;
+        margin: 0 auto;
+    }
+
+    .choice {
+        width: 100%;
+    }
+
+    .options {
+        position: relative;
+        top: -452px;
+        margin: 0 0 0 auto;
+        width: clamp(20rem, 70%, 50rem);
+    }
+
+    .answer {
+        min-height: 360px;
+    }
+
+    .order-overview button {
+        margin: 3rem 0 1rem auto;
+    }
+
+    .order-preview {
+        width: 100%;
+    }
+}

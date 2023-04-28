@@ -1,0 +1,342 @@
+.card--about {
+    width: 90%;
+    background-image: url(../assets/about/mobile/image-hero-whitecup.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin-top: 4rem;
+    padding: 6rem 1.5rem;
+
+    p {
+        margin: 1.5rem auto;
+        width: clamp(10rem, 75vw, 22rem);
+    }
+}
+
+.commitment {
+    display: flex;
+    flex-direction: column;
+}
+
+.commitment .card--commitment {
+    width: 90%;
+    background-image: url(../assets/about/mobile/image-commitment.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top;
+    min-height: 25rem;
+    margin: 7.5rem auto 3rem;
+}
+
+.commitment h1 {
+    color: #333d4b;
+    text-align: center;
+    font-family: "Fraunces", sans-serif;
+    font-weight: 900;
+    font-size: 2rem;
+}
+
+.commitment p {
+    color: #333d4b;
+    text-align: center;
+    font-family: "Barlow", sans-serif;
+    font-size: 0.95rem;
+    line-height: 1.5;
+    width: clamp(8rem, 85vw, 25rem);
+    margin: 1.875rem auto 0;
+}
+
+.card--quality {
+    position: relative;
+    width: 90%;
+    background-image: url(../assets/about/mobile/bg-quality.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    padding: 8rem 1.5rem 3.75rem;
+    margin: 15rem auto 0;
+}
+
+.quality__img {
+    background-image: url(../assets/about/mobile/image-quality.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 0.8rem;
+    top: 0;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin: 0 auto;
+    height: 12rem;
+    width: 90%;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.3);
+}
+
+.quality__text {
+    h1 {
+        font-size: 1.75rem;
+    }
+
+    p {
+        margin: 1.5rem auto 0;
+        font-size: 0.95rem;
+        line-height: 1.7;
+        width: clamp(5rem, 70vw, 22rem);
+    }
+}
+
+.headquarters {
+    margin: 1rem auto;
+    width: 90%;
+}
+.headquarters h2 {
+    margin: 2em auto;
+    text-align: center;
+    font-size: 1.5rem;
+    color: #848990;
+    font-family: "Fraunces", sans-serif;
+    font-weight: 900;
+}
+
+.country {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 1rem auto;
+    color: #333d4b;
+}
+.country img {
+    margin: 1rem auto;
+}
+.country h1 {
+    text-align: center;
+    font-family: "Fraunces", sans-serif;
+    font-weight: 900;
+}
+.country ul {
+    font-family: "Barlow", sans-serif;
+    list-style: none;
+    text-align: center;
+}
+.country ul li {
+    margin: 1rem 0;
+}
+
+@media (min-width: 711px) {
+    .card--about {
+        background-image: url(../assets/about/tablet/image-hero-whitecup.jpg);
+        margin-top: 4rem;
+        padding: 8rem 3.2rem 6rem;
+        min-height: 28rem;
+
+        h1 {
+            text-align: left;
+            font-size: 2.2rem;
+        }
+
+        p {
+            text-align: left;
+            margin: 2rem 0 0;
+            width: 20rem;
+            font-size: 1rem;
+        }
+    }
+
+    .commitment {
+        position: relative;
+        width: 90%;
+        flex-direction: row;
+        align-items: center;
+        margin: 10rem auto;
+    }
+
+    .commitment .card--commitment {
+        background-image: url(../assets/about/tablet/image-commitment.jpg);
+        background-size: cover;
+        margin: 0 3rem 0 0;
+        min-height: clamp(25rem, 70vw, 30rem);
+        max-width: 20rem;
+    }
+
+    .commitment h1 {
+        width: 100%;
+        text-align: left;
+        font-size: clamp(1.2rem, 3.6vw, 2.1rem);
+    }
+
+    .commitment p {
+        text-align: left;
+        width: 40vw;
+        margin: 1.3rem 0 0;
+        font-size: clamp(0.8rem, 2.4vw, 1.1rem);
+    }
+
+    .card--quality {
+        margin: 50vw auto 10em auto;
+        padding: 23vw 1.5em 4em 1.5em;
+        position: relative;
+        background-image: url("../assets/about/tablet/bg-quality.png");
+        background-size: cover;
+        background-repeat: none;
+    }
+
+    .quality__img {
+        position: absolute;
+        height: 30vw;
+        width: 60%;
+        background-image: url(../assets/about/tablet/image-quality.jpg);
+    }
+
+    .quality__text {
+        h1 {
+            font-size: 2rem;
+        }
+
+        p {
+            margin: 2rem auto 0;
+            font-size: 1rem;
+            line-height: 1.7;
+            width: clamp(5rem, 70vw, 40rem);
+        }
+    }
+
+    .headquarters {
+        margin: 1rem auto;
+
+        h2 {
+            margin: 1rem 0 1rem 1rem;
+            text-align: left;
+            font-size: 1.8rem;
+        }
+    }
+
+    .countries {
+        display: flex;
+    }
+
+    .country {
+        margin: 2em auto;
+        width: clamp(300px, 10vw, 450px);
+        color: #333d4b;
+
+        img {
+            width: clamp(3rem, 9vw, 5.2rem);
+            margin: 1rem 0 3rem 0;
+        }
+
+        h1 {
+            text-align: left;
+            font-size: clamp(1rem, 3vw, 1.7rem);
+        }
+        ul {
+            margin-top: 1rem;
+            li {
+                margin: 0.5rem 0;
+                text-align: left;
+                font-size: clamp(1rem, 1.7vw, 1.2rem);
+            }
+        }
+    }
+}
+
+@media (min-width: 1440px) {
+    .card--about {
+        width: 80%;
+        background-image: url(../assets/about/desktop/image-hero-whitecup.jpg);
+        margin-top: 4rem;
+        padding: 6rem 4.3rem;
+
+        p {
+            font-size: 0.9rem;
+            margin: 1.7rem 0;
+        }
+    }
+
+    .commitment {
+        width: 80%;
+        justify-content: center;
+        margin: 10rem auto 0;
+    }
+
+    .commitment .card--commitment {
+        background-image: url(../assets/about/desktop/image-commitment.jpg);
+        margin: 0 6.25rem 0 0;
+        height: 35rem;
+    }
+
+    .commitment h1 {
+        font-size: clamp(1.2rem, 4vw, 2.6rem);
+    }
+
+    .card--quality {
+        width: 80%;
+        padding: 5rem 0 7rem 5rem;
+        margin: 22rem auto 10em auto;
+        background-image: url("../assets/about/desktop/bg-quality.png");
+    }
+
+    .quality__img {
+        width: clamp(20em, 25vw, 25rem);
+        height: clamp(20em, 25vw, 25rem);
+        right: 0;
+        top: -5rem;
+        transform: translate(0, 0);
+        background-image: url(../assets/about/desktop/image-quality.jpg);
+    }
+
+    .quality__text {
+        margin: 0;
+        h1 {
+            font-size: 2rem;
+            text-align: left;
+        }
+
+        p {
+            text-align: left;
+            margin: 2.7rem 0 0;
+            font-size: 0.9rem;
+            line-height: 1.7;
+            width: clamp(20rem, 33vw, 30rem);
+        }
+    }
+
+    .headquarters {
+        width: 80%;
+        margin: 1rem auto;
+
+        h2 {
+            margin: 1rem 0 2.2rem 1rem;
+            text-align: left;
+            font-size: 1.5rem;
+        }
+    }
+
+    .countries {
+        display: flex;
+    }
+
+    .country {
+        margin: 1em auto;
+        width: clamp(300px, 10vw, 450px);
+        color: #333d4b;
+
+        img {
+            width: clamp(3rem, 9vw, 4.8rem);
+            margin: 1rem 0 3rem 0;
+        }
+
+        h1 {
+            text-align: left;
+            font-size: clamp(1rem, 3vw, 1.4rem);
+        }
+        ul {
+            margin-top: 1rem;
+            li {
+                margin: 0.5rem 0;
+                text-align: left;
+                font-size: 1rem;
+            }
+        }
+    }
+}
