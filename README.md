@@ -24,7 +24,7 @@ Your challenge is to **build out a shop landing page** which can be anything fro
 
 <p>Using the SASS preprocessor helped me promote better readability within my code. Also, this was my first project with a Mobile First approach, which was essential to be able to adapt the layout and its functionalities to different devices.</p>
 
-<h2>:computer: My Process</h2>
+<h2>👨‍💻 My Process</h2>
 <h3>Built with:</h3>
 <li>HTML</li>
 <li>CSS</li>
